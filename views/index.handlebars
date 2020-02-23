@@ -1,0 +1,51 @@
+<div class="container-fluid d-flex flex-column">
+    <div class="row">
+        {{!-- 標題 --}}
+        <h4 class='d-flex justify-content-center'>你想對誰說幹話？</h4>
+
+        <form method='POST' action="/" class='col-12'>
+
+            {{!-- 圖片 --}}
+            <div class='d-flex flex-row img-panel justify-content-between align-items-end col-12'>
+                <div class='d-flex flex-column align-items-center'>
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                        class="rounded float-left" alt="...">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="engineer" {{#if isEngineer}}checked{{/if}}>
+                        <label class="form-check-label" for="inlineRadio1">工程師</label>
+                    </div>
+                </div>
+
+                <div class='d-flex flex-column align-items-center'>
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                        class="rounded float-center" alt="...">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="designer" {{#if isDesigner}}checked{{/if}}>
+                        <label class="form-check-label" for="inlineRadio2">設計師</label>
+                    </div>
+                </div>
+
+                <div class='d-flex flex-column align-items-center'>
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                        class="rounded float-right" alt="...">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="entrepreneur" {{#if isEntrepreneur}}checked{{/if}}>
+                        <label class="form-check-label" for="inlineRadio3">企業家</label>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- button, 幹話顯示區 --}}
+            <div class="nonsense-panel d-flex flex-row justify-content-between col-12">
+                <button type="submit" class="btn btn-outline-primary col-2">產生幹話</button>
+                <div class="textbox col-9">
+                    {{#if nonsense}}
+                        <div class="alert alert-light" role="alert">
+                            {{nonsense}}
+                        </div>
+                    {{/if}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

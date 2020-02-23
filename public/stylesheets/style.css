@@ -1,0 +1,44 @@
+*{
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+}
+
+.container-fluid {
+    margin: auto;
+    width: 70%;
+}
+
+h4 {
+    width: 30%;
+    margin: 30px auto;
+    /* background-color: yellow; */
+}
+
+.img-panel input{
+    border-radius: 50%;
+}
+
+
+img {
+    max-width: 220px;
+    max-height: 170px;
+    margin-bottom: 1.5vw;
+    border: 1px solid #CCD1D1;
+    object-fit: scale-down; 
+}
+
+.nonsense-panel {
+    margin: 2.5vw 0;
+    /* background-color: violet; */
+}
+
+.nonsense-panel button {
+    height: 80px;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+}
+
+.textbox {
+    border: 2px solid #CCD1D1;
+    height: 200px;
+}
